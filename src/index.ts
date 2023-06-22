@@ -3,7 +3,7 @@ import { connectApp } from "./config/db";
 import { getUserMedia } from "./crons/insta-cache-cron";
 import { instaRefresh } from "./crons/insta-refresh.cron";
 import cron from "node-cron";
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 3000;
 
 const start = async () => {
   if (!process.env.INSTA_APP_ID) {
