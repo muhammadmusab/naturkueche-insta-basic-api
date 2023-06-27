@@ -59,7 +59,7 @@ export async function getUserMedia(accessToken?: string) {
         publishedAt: media.timestamp,
       };
     });
-
+    await InstaMedia.deleteMany({})
     await InstaMedia.insertMany(formattedData);
 
     return formattedData;
